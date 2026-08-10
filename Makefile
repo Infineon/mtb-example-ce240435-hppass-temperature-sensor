@@ -7,8 +7,8 @@
 #
 ################################################################################
 # \copyright
-# Copyright 2024, Cypress Semiconductor Corporation (an Infineon company)
-# SPDX-License-Identifier: Apache-2.0
+# (c) 2024-2026, Infineon Technologies AG, or an affiliate of Infineon
+# Technologies AG.  SPDX-License-Identifier: Apache-2.0
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@
 MTB_TYPE=COMBINED
 
 # Target board/hardware (BSP).
-# To change the target, it is recommended to use the Library manager
+# To change the target, it is required to use the Library manager
 # ('make library-manager' from command line), which will also update Eclipse IDE launch
 # configurations.
 TARGET=KIT_PSC3M5_EVK
@@ -50,7 +50,7 @@ APPNAME=mtb-example-ce240435-hppass-temperature-sensor
 
 # Name of toolchain to use. Options include:
 #
-# GCC_ARM -- GCC provided with ModusToolbox software
+# GCC_ARM -- GCC is available as part of ModusToolbox Setup program
 # ARM     -- ARM Compiler (must be installed separately)
 # IAR     -- IAR Compiler (must be installed separately)
 #
@@ -103,8 +103,8 @@ INCLUDES=
 # Add additional defines to the build process (without a leading -D).
 DEFINES=
 
-# Select softfp, hardfp or softfloat floating point. Default is softfp.
-VFP_SELECT=softfloat
+# Select softfloat or hardfp floating point. Default is softfloat.
+VFP_SELECT=
 
 # Additional / custom C compiler flags.
 #
@@ -141,6 +141,11 @@ PREBUILD=
 # Custom post-build commands to run.
 POSTBUILD=
 
+# Config file for postbuild sign, relocate and merge operations.
+ifneq ($(findstring PSC3M6,$(TARGET)),)
+COMBINE_SIGN_JSON?=configs/signer_combiner.json
+endif
+
 
 ################################################################################
 # Paths
@@ -168,9 +173,8 @@ CY_GETLIBS_SHARED_NAME=mtb_shared
 # toolchain used for the build. Refer to the ModusToolbox user guide to get the correct
 # variable name for the toolchain used in your build.
 #
-# The default depends on the selected TOOLCHAIN (GCC_ARM uses the ModusToolbox
-# software provided compiler by default).
-CY_COMPILER_GCC_ARM_DIR=
+# The default path depends on the selected TOOLCHAIN and is set in the Make recipe.
+CY_COMPILER_GCC_ARM_DIR?=
 
 
 # Locate ModusToolbox helper tools folders in default installation
