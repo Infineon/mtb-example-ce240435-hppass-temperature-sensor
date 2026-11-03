@@ -126,7 +126,7 @@ ASFLAGS=
 
 # Additional / custom linker flags.
 ifeq ($(TOOLCHAIN),ARM)
-LDFLAGS=--diag_suppress=L6848
+LDFLAGS=--diag_suppress=L6848,L6314,L6329
 endif
 
 # Additional / custom libraries to link in to the application.

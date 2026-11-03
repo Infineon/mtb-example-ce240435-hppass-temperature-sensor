@@ -4,14 +4,14 @@ This example demonstrates how to read the internal temperature of Infineon's PSO
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-ce240435-hppass-temperature-sensor)
 
-[Provide feedback on this code example.](https://yourvoice.infineon.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDA0MzUiLCJTcGVjIE51bWJlciI6IjAwMi00MDQzNSIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IENvbnRyb2wgTUNVOiBIUFBBU1Mgb24tY2hpcCB0ZW1wZXJhdHVyZSBzZW5zb3IiLCJyaWQiOiJkYXZpZC56dW9AaW5maW5lb24uY29tIiwiRG9jIHZlcnNpb24iOiIxLjEuMSIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://yourvoice.infineon.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyNDA0MzUiLCJTcGVjIE51bWJlciI6IjAwMi00MDQzNSIsIkRvYyBUaXRsZSI6IlBTT0MmdHJhZGU7IENvbnRyb2wgTUNVOiBIUFBBU1Mgb24tY2hpcCB0ZW1wZXJhdHVyZSBzZW5zb3IiLCJyaWQiOiJkYXZpZC56dW9AaW5maW5lb24uY29tIiwiRG9jIHZlcnNpb24iOiIyLjAuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 
 ## Requirements
 
-- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.8 or later
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.8 or later (tested with v3.9)
 - Board support package (BSP) minimum required version for:
-   - KIT_PSC3M5_EVK: 1.0.3
+   - KIT_PSC3M5_EVK: 3.3.0
    - KIT_PSC3M6_EVAL: 1.0.0
 - Programming language: C
 - Associated parts: All [PSOC&trade; Control C3 MCU](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-control-arm-cortex-m33-mcu) parts
@@ -298,6 +298,7 @@ Document title: *CE240435* – * PSOC&trade; Control MCU: HPPASS on-chip tempera
  1.0.0   | New code example
  1.1.0   | Add KIT_PSC3M6_EVAL support
  1.1.1   | Readme update to match the button name
+ 2.0.0   | Migrate CE to KIT_PSC3M5_EVK 3.x
 
 <br>
 
